@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+  <parameter name="userid" value="8072344"></parameter>
+    <classes>
+          <class name="restassured.UserManagement"/>
+      	  <class name="restassured.UserManagement_GraphQL"/>
+		  <class name="restassured.Posts"/>
+		  <class name="restassured.ErrorHandling"/>
+		  <class name="restassured.EdgeCaseHandling"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
