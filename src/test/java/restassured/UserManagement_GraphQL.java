@@ -22,7 +22,7 @@ public class UserManagement_GraphQL {
 	public void get_user_by_id() {
 
 		RestAssured.baseURI = "https://gorest.co.in/public/v2/graphql";
-		String query = "query{user(id: 8061871) { id name email gender status }}";
+		String query = "query{user(id: 8104681) { id name email gender status }}";
 		String jsonString = GraphQL.graphQLtoJson(query);
 		given().log().all().header("accept", "application/json").header("Content-Type", "application/json")
 				.header("Authorization", "Bearer " + Constants.access_token).body(jsonString).when().post().then().log()
@@ -31,8 +31,8 @@ public class UserManagement_GraphQL {
 
 	@DataProvider
 	public Object[][] getData() {
-		return new Object[][] { { "Harry Potter", "harry.potter@example.com" },
-				{ "Jack Jones", "jack.jones@example.com" } };
+		return new Object[][] { { "Harry Potter1", "harry.potter1@example.com" },
+				{ "Jack Jones1", "jack.jones1@example.com" } };
 	}
 
 	@Test(dataProvider = "getData")
